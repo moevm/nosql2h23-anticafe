@@ -1,11 +1,21 @@
 <template>
- <v-card
-          class="mx-auto"
-          max-width="344"
-          :color="indigo"
-          :variant="primary"
-        >
-          <v-card-item>
+  <div style="width: 255px;
+   height: 100vh;
+    padding: 3%;
+     background-color: #363740; 
+     color: #fff;
+      position: fixed;
+       bottom:0px;
+        left:0px;">
+    <img src="../assets/logo.png">
+    <nav>
+      <a>1</a>
+      <a>2</a>
+    </nav>
+  </div>
+
+  <!-- <div style="max-width: 255px; height: 100%; padding: 3%; background-color:#363740; color: #fff;">
+    <img href="./img/logo.png">
             <div>
               <div class="text-overline mb-1">
                 {{ variant }}
@@ -15,16 +25,22 @@
               </div>
               <div class="text-caption">Greyhound divisely hello coldly fonwderfully</div>
             </div>
-          </v-card-item>
 
-          <v-card-actions>
             <v-btn>
-              Button
+              LOGO
             </v-btn>
-          </v-card-actions>
-        </v-card>
+            <br>
+            <v-btn>
+              Бронь стола
+            </v-btn>
+            <v-btn>
+              Регистрация
+            </v-btn>
+            
+          
+  </div> -->
 </template>
 
-<script setup>
+<script>
   //
 </script>

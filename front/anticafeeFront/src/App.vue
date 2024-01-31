@@ -1,10 +1,9 @@
 <template>
   <router-view />
-  <leftnav></leftnav>
+  <MainPage/>
 </template>
 
 <script>
-  //import Leftnav from './components/Leftnav.vue'
   export default {
     name: 'App',
     data() {
@@ -15,8 +14,5 @@
     methods: {
 
     },
-    // components: {
-    //   Leftnav
-    // }
   }
 </script>
