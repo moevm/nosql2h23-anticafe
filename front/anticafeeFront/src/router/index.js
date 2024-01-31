@@ -13,6 +13,12 @@ export default createRouter({
       component: () => import(/* webpackChunkName: "mainPage" */ '../views/MainPage.vue'),
     },
 
+    {
+      path: '/book', //'/sales/'
+      name: 'book_table',
+      component: () => import(/* webpackChunkName: "bookTable" */ '../views/BookTable.vue'),
+    },
+
   ]
 })
 
