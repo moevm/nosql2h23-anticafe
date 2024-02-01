@@ -1,5 +1,5 @@
 """
-URL configuration for bistro project.
+URL configuration for backend project.
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/4.2/topics/http/urls/
@@ -14,11 +14,15 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
-from django.conf.urls import url
-from bistroapp.views import DishList, DishDetail
-
+from django.contrib import admin
+from django.urls import path
+from django.views.decorators.csrf import csrf_exempt
+from graphene_django.views import GraphQLView
+from main.urls import urlpatterns as _urlpatterns
 
 urlpatterns = [
-    url(r'dishes', DishList.as_view()),
-    url(r'dishes/(?P<pk>[0-9]+)$', DishDetail.as_view()),
+    path('admin/', admin.site.urls),
+    path("graphql", csrf_exempt(GraphQLView.as_view(graphiql=True))),
 ]
+
+urlpatterns += _urlpatterns
